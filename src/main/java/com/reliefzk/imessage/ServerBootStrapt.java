@@ -14,7 +14,7 @@ import io.netty.handler.codec.http.websocketx.WebSocketServerProtocolHandler;
 
 /**
  * 
- * @author kui.zhouk
+ * @author ReliefZk
  *
  */
 public class ServerBootStrapt {

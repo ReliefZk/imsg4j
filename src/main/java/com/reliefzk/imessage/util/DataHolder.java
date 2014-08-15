@@ -6,6 +6,11 @@ import java.util.concurrent.ConcurrentHashMap;
 
 import com.reliefzk.imessage.vo.Message;
 
+/**
+ * 
+ * @author ReliefZk
+ *
+ */
 public class DataHolder {
 	private static ConcurrentHashMap<String, List<Message>> messages = new ConcurrentHashMap<String, List<Message>>();
 

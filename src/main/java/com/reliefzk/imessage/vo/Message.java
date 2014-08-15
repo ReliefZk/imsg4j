@@ -3,6 +3,11 @@ package com.reliefzk.imessage.vo;
 import java.text.SimpleDateFormat;
 import java.util.Date;
 
+/**
+ * 
+ * @author ReliefZk
+ *
+ */
 public class Message {
 	private String fromWho;
 	private String toWho;
