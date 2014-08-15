@@ -10,6 +10,7 @@
 			socket.onopen = onopen;
 			socket.onmessage = onmessage;
 			socket.onclose = onclose;
+			socket.onerror = onerror; 
 		} else {
 			alert("Your browser does not support Web Socket.");
 		}
@@ -19,10 +20,14 @@
 		}
 
 		function onmessage(event) {
+			console.log(event.data);
 			appendTextArea(event.data);
 		}
 		function onclose(event) {
 			appendTextArea("Web Socket closed");
+		}
+		function onerror(event){
+			console.log('Error occured: ' + event.data); 
 		}
 
 		function appendTextArea(newData) {

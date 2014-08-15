@@ -29,20 +29,19 @@ public class ServerBootStrapt {
 		EventLoopGroup workerGroup = new NioEventLoopGroup();
 		try {
 			final ServerBootstrap sb = new ServerBootstrap();
-			sb.group(bossGroup, workerGroup)
-					.channel(NioServerSocketChannel.class)
-					.childHandler(new ChannelInitializer<SocketChannel>() {
-						@Override
-						public void initChannel(final SocketChannel ch)
-								throws Exception {
-							ch.pipeline().addLast(
-									new HttpRequestDecoder(),
-									new HttpObjectAggregator(65536),
-									new HttpResponseEncoder(),
-									new WebSocketServerProtocolHandler("/websocket"),
-									new CustomTextFrameHandler());
-						}
-					});
+			sb.group(bossGroup, workerGroup).channel(NioServerSocketChannel.class).childHandler(new ChannelInitializer<SocketChannel>() {
+				@Override
+				public void initChannel(final SocketChannel ch) throws Exception {
+					ch.pipeline()
+						.addLast(
+							new HttpRequestDecoder(), 
+							new HttpObjectAggregator(65536), 
+							new HttpResponseEncoder(), 
+							new WebSocketServerProtocolHandler("/websocket"), 
+							new CustomTextFrameHandler()
+						);
+				}
+			});
 
 			final Channel ch = sb.bind(port).sync().channel();
 			System.out.println("Web socket server started at port " + port);
