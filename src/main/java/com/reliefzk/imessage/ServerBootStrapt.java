@@ -13,25 +13,8 @@ import io.netty.handler.codec.http.HttpResponseEncoder;
 import io.netty.handler.codec.http.websocketx.WebSocketServerProtocolHandler;
 
 /**
- * A WebSocket Server that respondes to requests at:
- *
- * <pre>
- * http://localhost:8080/websocket
- * </pre>
- *
- * The example differs from many of the other examples in Netty in that is does
- * not have an acomponying client. Instead a html page is provided that
- * interacts with this server. <br>
- * Open up the following file a web browser that supports WebSocket's:
- *
- * <pre>
- * example/src/main/resources/websocketx/html5/websocket.html
- * </pre>
- *
- * The html page is very simple were you simply enter some text and the server
- * will echo the same text back, but in uppercase. You, also see getStatus messages
- * in the "Response From Server" area when client has connected, disconnected
- * etc.
+ * 
+ * @author kui.zhouk
  *
  */
 public class ServerBootStrapt {

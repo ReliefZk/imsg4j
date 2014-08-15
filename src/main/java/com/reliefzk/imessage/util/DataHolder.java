@@ -4,7 +4,7 @@ import java.util.ArrayList;
 import java.util.List;
 import java.util.concurrent.ConcurrentHashMap;
 
-import com.reliefzk.imessage.domain.Message;
+import com.reliefzk.imessage.vo.Message;
 
 public class DataHolder {
 	private static ConcurrentHashMap<String, List<Message>> messages = new ConcurrentHashMap<String, List<Message>>();
